@@ -1,0 +1,25 @@
+{
+    "name": "qed/laravel-online-user",
+    "description": "Get information if user is online based on laravel echo",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "QedCode",
+            "email": "development@qedcode.net"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Qed\\LaravelOnlineUser\\": "src/"
+        }
+    },
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Qed\\LaravelOnlineUser\\LaravelOnlineUserServiceProvider"
+            ]
+        }
+    }
+}

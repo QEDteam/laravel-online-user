@@ -13,7 +13,7 @@ composer require qed/laravel-online-user
 Publish config:
 
 ```
-php artisan vendor:publish --provider="Qed\LaravelCssInliner\LaravelOnlineUserServiceProvider"
+php artisan vendor:publish --provider="Qed\LaravelOnlineUser\LaravelOnlineUserServiceProvider"
 ```
 
 Generate laravel echo server client and get APP_ID and APP_KEY
@@ -31,9 +31,10 @@ LARAVEL_ECHO_SERVER_APP_KEY=APP_KEY
 LARAVEL_ECHO_SERVER_CHANNEL='user-online.'
 ```
 
-Run command that generates new private broadcast route:
+Run config clear and command that generates new private broadcast route:
 
 ```
+php artisan config:clear
 php artisan create:channel
 ```
 

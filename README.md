@@ -1,6 +1,6 @@
 # Laravel Online User
 
-Laravel package that is used alongside laravel echo server and redis. Trough trait you can always get user online status trough occupied private channel.
+Laravel package that is used alongside laravel echo server and redis. Trough trait you can always get user online status with help of a occupied private channel and laravel echo server api.
 
 ## Installation
 
@@ -16,7 +16,7 @@ Publish config:
 php artisan vendor:publish --provider="Qed\LaravelCssInliner\LaravelOnlineUserServiceProvider"
 ```
 
-Genrate laravel echo server client and get APP_ID and APP_KEY
+Generate laravel echo server client and get APP_ID and APP_KEY
 ```
 laravel-echo-server client:add APP_ID
 ```
@@ -37,7 +37,7 @@ Run command that generates new private broadcast route:
 php artisan create:channel
 ```
 
-In the application where you listen for events add, note the event isn't importat, we will chack if user is subscribed to channel itself.
+In the application where you listen for events add private channel, note the event isn't important, we will check if user is subscribed to channel itself.
 
 ```
 Echo.private('LARAVEL_ECHO_SERVER_CHANNEL.${userId}')
